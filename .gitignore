@@ -1,0 +1,10 @@
+*.backup
+*.backup2
+__pycache__/
+*.py
+*.pyc
+test.md
+product_mapping.json
+extract_all_products.py
+build_menu.py
+nest.html
