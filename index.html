@@ -1,169 +1,54 @@
-<!DOCTYPE html>
-<html lang="es">
+<a href="#contact">Contacto</a>
+</div>
+</div>
+<div class="footer-bottom">
+    <p>&copy; 2025 La Mansión Bar. Todos los derechos reservados.</p>
+</div>
+</footer>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Mansión Bar | Ituzaingó & Castelar</title>
-    <meta name="description"
-        content="La Mansión Bar - El mejor lugar para disfrutar de hamburguesas, tragos y buena música en Ituzaingó y Castelar.">
+<script src="menu_data.js"></script>
+<script src="script.js"></script>
+<script>
+    // Image Slider
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slider-image');
+    const dotsContainer = document.querySelector('.slider-dots');
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
-        rel="stylesheet">
+    if (slides.length > 0) {
+        // Create dots
+        slides.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.className = 'slider-dot' + (index === 0 ? ' active' : '');
+            dot.onclick = () => goToSlide(index);
+            dotsContainer.appendChild(dot);
+        });
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="style.css">
+        // Auto-advance slider
+        setInterval(() => {
+            changeSlide(1);
+        }, 5000);
+    }
 
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
+    function changeSlide(direction) {
+        slides[currentSlide].classList.remove('active');
+        document.querySelectorAll('.slider-dot')[currentSlide].classList.remove('active');
 
-<body>
+        currentSlide = (currentSlide + direction + slides.length) % slides.length;
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="#" class="logo">LA MANSIÓN<span class="accent">.</span></a>
-            <button class="mobile-menu-btn" aria-label="Menu">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-links">
-                <li><a href="#home">Inicio</a></li>
-                <li><a href="#menu">Menú</a></li>
-                <li><a href="#locations">Ubicaciones</a></li>
-                <li><a href="#contact" class="btn-nav">Reservar</a></li>
-            </ul>
-        </div>
-    </nav>
+        slides[currentSlide].classList.add('active');
+        document.querySelectorAll('.slider-dot')[currentSlide].classList.add('active');
+    }
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <h1 class="hero-title">Noches <span class="text-gradient">Inolvidables</span></h1>
-            <p class="hero-subtitle">Hamburguesas Gourmet · Tragos de Autor · Buena Música</p>
-            <div class="hero-buttons">
-                <a href="#menu" class="btn btn-primary">Ver Menú</a>
-                <a href="#locations" class="btn btn-outline">Visítanos</a>
-            </div>
-        </div>
-    </section>
+    function goToSlide(index) {
+        slides[currentSlide].classList.remove('active');
+        document.querySelectorAll('.slider-dot')[currentSlide].classList.remove('active');
 
-    <!-- About Preview -->
-    <section class="about-preview">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-text">
-                    <h2>La Experiencia <span class="accent">La Mansión</span></h2>
-                    <p>Más que un bar, somos un punto de encuentro. Disfruta de la mejor gastronomía y coctelería en un
-                        ambiente diseñado para compartir momentos únicos.</p>
-                    <div class="features">
-                        <div class="feature">
-                            <i class="fas fa-hamburger"></i>
-                            <span>Comida Casera</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-cocktail"></i>
-                            <span>Tragos Premium</span>
-                        </div>
-                        <h2>Reservá tu <span class="accent">Mesa</span></h2>
-                        <p>Contactanos para hacer tu reserva</p>
-                    </div>
-                    <div class="contact-content">
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <i class="fab fa-whatsapp"></i>
-                                <h3>WhatsApp</h3>
-                                <p>Hacé tu reserva por WhatsApp</p>
-                                <a href="https://wa.me/5491141907720" target="_blank" class="btn-primary">Contactar</a>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fab fa-instagram"></i>
-                                <h3>Instagram</h3>
-                                <p>Seguinos en nuestras redes</p>
-                                <a href="https://www.instagram.com/lacasabar_" target="_blank" class="btn-primary">Ver
-                                    Instagram</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    </section>
+        currentSlide = index;
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/5491141907720" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container footer-content">
-            <div class="footer-brand">
-                <h3>LA MANSIÓN<span class="accent">.</span></h3>
-                <p>Donde las noches cobran vida.</p>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/lacasabar_" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://linktr.ee/lamansionbarituzaingo" target="_blank"><i class="fas fa-link"></i></a>
-                </div>
-            </div>
-            <div class="footer-links">
-                <a href="#home">Inicio</a>
-                <a href="#menu">Menú</a>
-                <a href="#locations">Ubicaciones</a>
-                <a href="#contact">Contacto</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 La Mansión Bar. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-
-    <script src="menu_data.js"></script>
-    <script src="script.js"></script>
-    <script>
-        // Image Slider
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slider-image');
-        const dotsContainer = document.querySelector('.slider-dots');
-
-        if (slides.length > 0) {
-            // Create dots
-            slides.forEach((_, index) => {
-                const dot = document.createElement('div');
-                dot.className = 'slider-dot' + (index === 0 ? ' active' : '');
-                dot.onclick = () => goToSlide(index);
-                dotsContainer.appendChild(dot);
-            });
-
-            // Auto-advance slider
-            setInterval(() => {
-                changeSlide(1);
-            }, 5000);
-        }
-
-        function changeSlide(direction) {
-            slides[currentSlide].classList.remove('active');
-            document.querySelectorAll('.slider-dot')[currentSlide].classList.remove('active');
-
-            currentSlide = (currentSlide + direction + slides.length) % slides.length;
-
-            slides[currentSlide].classList.add('active');
-            document.querySelectorAll('.slider-dot')[currentSlide].classList.add('active');
-        }
-
-        function goToSlide(index) {
-            slides[currentSlide].classList.remove('active');
-            document.querySelectorAll('.slider-dot')[currentSlide].classList.remove('active');
-
-            currentSlide = index;
-
-            slides[currentSlide].classList.add('active');
-            document.querySelectorAll('.slider-dot')[currentSlide].classList.add('active');
-        }
-    </script>
+        slides[currentSlide].classList.add('active');
+        document.querySelectorAll('.slider-dot')[currentSlide].classList.add('active');
+    }
+</script>
 </body>
 
 </html>
