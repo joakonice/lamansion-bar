@@ -50,188 +50,173 @@
                 <a href="#menu" class="btn btn-primary">Ver Menú</a>
                 <a href="#locations" class="btn btn-outline">Visítanos</a>
             </div>
-        </div>
-    </section>
+            <div class="feature">
+                <i class="fas fa-cocktail"></i>
+                <span>Tragos Premium</span>
+            </div>
+            <div class="feature">
+                <i class="fas fa-music"></i>
 
-    <!-- About Preview -->
-    <section class="about-preview">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-text">
-                    <h2>La Experiencia <span class="accent">La Mansión</span></h2>
-                    <p>Más que un bar, somos un punto de encuentro. Disfruta de la mejor gastronomía y coctelería en un
-                        ambiente diseñado para compartir momentos únicos.</p>
-                    <div class="features">
-                        <div class="feature">
-                            <i class="fas fa-hamburger"></i>
-                            <span>Comida Casera</span>
+                <!-- Menu Section -->
+                <section id="menu" class="menu-section">
+                    <div class="container">
+                        <div class="section-header">
+                            <h2>Nuestro <span class="accent">Menú</span></h2>
+                            <p>Explora nuestras especialidades</p>
                         </div>
-                        <div class="feature">
-                            <i class="fas fa-cocktail"></i>
-                            <span>Tragos Premium</span>
+
+                        <div class="menu-categories">
+                            <button class="filter-btn active" data-category="all">Todos</button>
+                            <button class="filter-btn" data-category="Entradas">Entradas</button>
+                            <button class="filter-btn" data-category="Papas Fritas">Papas</button>
+                            <button class="filter-btn" data-category="Hamburgesas">Hamburguesas</button>
+                            <button class="filter-btn" data-category="Pizza">Pizzas</button>
+                            <button class="filter-btn" data-category="Postres">Postres</button>
+                            <button class="filter-btn" data-category="Sin Alcohol">Sin Alcohol</button>
+                            <button class="filter-btn" data-category="Limonadas">Limonadas</button>
+                            <button class="filter-btn" data-category="Jarras">Jarras</button>
+                            <button class="filter-btn" data-category="Cervezas">Cervezas</button>
+                            <button class="filter-btn" data-category="Champagne">Champagne</button>
+                            <button class="filter-btn" data-category="Medidas">Medidas</button>
+                            <button class="filter-btn" data-category="Vino">Vino</button>
+                            <button class="filter-btn" data-category="Cocktails">Cocktails</button>
+                            <button class="filter-btn" data-category="Caipis">Caipis</button>
+                            <button class="filter-btn" data-category="Gin Drinks">Gin Drinks</button>
                         </div>
-                        <div class="feature">
-                            <i class="fas fa-music"></i>
 
-                            <!-- Menu Section -->
-                            <section id="menu" class="menu-section">
-                                <div class="container">
-                                    <div class="section-header">
-                                        <h2>Nuestro <span class="accent">Menú</span></h2>
-                                        <p>Explora nuestras especialidades</p>
-                                    </div>
+                        <div id="menu-grid" class="menu-grid">
+                            <!-- Items will be loaded here via JS -->
+                        </div>
+                    </div>
+                </section>
 
-                                    <div class="menu-categories">
-                                        <button class="filter-btn active" data-category="all">Todos</button>
-                                        <button class="filter-btn" data-category="Entradas">Entradas</button>
-                                        <button class="filter-btn" data-category="Papas Fritas">Papas</button>
-                                        <button class="filter-btn" data-category="Hamburgesas">Hamburguesas</button>
-                                        <button class="filter-btn" data-category="Pizza">Pizzas</button>
-                                        <button class="filter-btn" data-category="Postres">Postres</button>
-                                        <button class="filter-btn" data-category="Sin Alcohol">Sin Alcohol</button>
-                                        <button class="filter-btn" data-category="Limonadas">Limonadas</button>
-                                        <button class="filter-btn" data-category="Jarras">Jarras</button>
-                                        <button class="filter-btn" data-category="Cervezas">Cervezas</button>
-                                        <button class="filter-btn" data-category="Champagne">Champagne</button>
-                                        <button class="filter-btn" data-category="Medidas">Medidas</button>
-                                        <button class="filter-btn" data-category="Vino">Vino</button>
-                                        <button class="filter-btn" data-category="Cocktails">Cocktails</button>
-                                        <button class="filter-btn" data-category="Caipis">Caipis</button>
-                                        <button class="filter-btn" data-category="Gin Drinks">Gin Drinks</button>
-                                    </div>
-
-                                    <div id="menu-grid" class="menu-grid">
-                                        <!-- Items will be loaded here via JS -->
-                                    </div>
+                <!-- Locations Section -->
+                <section id="locations" class="locations-section">
+                    <div class="container">
+                        <div class="section-header">
+                            <h2>Nuestras <span class="accent">Casas</span></h2>
+                        </div>
+                        <div class="locations-grid">
+                            <!-- Ituzaingó -->
+                            <div class="location-card">
+                                <div class="loc-image">
+                                    <img src="images/locations/mansion1.jpg" alt="Ituzaingó">
                                 </div>
-                            </section>
-
-                            <!-- Locations Section -->
-                            <section id="locations" class="locations-section">
-                                <div class="container">
-                                    <div class="section-header">
-                                        <h2>Nuestras <span class="accent">Casas</span></h2>
+                                <div class="loc-info">
+                                    <h3>La Mansión Bar</h3>
+                                    <p class="loc-subtitle">Ituzaingó</p>
+                                    <div class="loc-details">
+                                        <p><i class="fas fa-map-marker-alt"></i> Gdor. Mariano Acosta 178
+                                        </p>
+                                        <p><i class="fas fa-clock"></i> Mié - Dom: 19:00 - Cierre</p>
                                     </div>
-                                    <div class="locations-grid">
-                                        <!-- Ituzaingó -->
-                                        <div class="location-card">
-                                            <div class="loc-image">
-                                                <img src="images/locations/mansion1.jpg" alt="Ituzaingó">
-                                            </div>
-                                            <div class="loc-info">
-                                                <h3>La Mansión Bar</h3>
-                                                <p class="loc-subtitle">Ituzaingó</p>
-                                                <div class="loc-details">
-                                                    <p><i class="fas fa-map-marker-alt"></i> Gdor. Mariano Acosta 178
-                                                    </p>
-                                                    <p><i class="fas fa-clock"></i> Mié - Dom: 19:00 - Cierre</p>
-                                                </div>
-                                                <a href="https://www.google.com/maps/place/La+mansi%C3%B3n+bar/@-34.660572,-58.6696015,17z"
-                                                    target="_blank" class="btn btn-sm">Ver Mapa</a>
-                                            </div>
-                                        </div>
-
-                                        <!-- Castelar -->
-                                        <div class="location-card">
-                                            <div class="loc-image">
-                                                <img src="images/locations/mansion2.jpg" alt="Castelar">
-                                            </div>
-                                            <div class="loc-info">
-                                                <h3>La Casa Bar</h3>
-                                                <p class="loc-subtitle">Castelar</p>
-                                                <div class="loc-details">
-                                                    <p><i class="fas fa-map-marker-alt"></i> Santa Rosa 1099</p>
-                                                    <p><i class="fas fa-clock"></i> Mié - Dom: 19:00 - Cierre</p>
-                                                </div>
-                                                <a href="https://www.instagram.com/lacasabar_" target="_blank"
-                                                    class="btn btn-sm">Ver
-                                                    Instagram</a>
-                                            </div>
-                                        </div>
-
-                                        <!-- Moreno -->
-                                        <div class="location-card">
-                                            <div class="loc-image">
-                                                <img src="images/locations/moreno.jpg" alt="Moreno">
-                                            </div>
-                                            <div class="loc-info">
-                                                <h3>La Casa Bar</h3>
-                                                <p class="loc-subtitle">Moreno</p>
-                                                <div class="loc-details">
-                                                    <p><i class="fas fa-map-marker-alt"></i> Concejal Rosset 150</p>
-                                                    <p><i class="fas fa-clock"></i> Mié - Dom: 19:00 - Cierre</p>
-                                                </div>
-                                                <a href="https://www.instagram.com/lacasabar_m_/" target="_blank"
-                                                    class="btn btn-sm">Ver
-                                                    Instagram</a>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <a href="https://www.google.com/maps/place/La+mansi%C3%B3n+bar/@-34.660572,-58.6696015,17z"
+                                        target="_blank" class="btn btn-sm">Ver Mapa</a>
                                 </div>
-                            </section>
+                            </div>
 
-                            <!-- Contact/Reservation Section -->
-                            <section id="contact" class="contact-section">
-                                <div class="container">
-                                    <div class="section-header">
-                                        <h2>Reservá tu <span class="accent">Mesa</span></h2>
-                                        <p>Contactanos para hacer tu reserva</p>
-                                    </div>
-                                    <div class="contact-content">
-                                        <div class="contact-info">
-                                            <div class="contact-item">
-                                                <i class="fab fa-whatsapp"></i>
-                                                <h3>WhatsApp</h3>
-                                                <p>Hacé tu reserva por WhatsApp</p>
-                                                <a href="https://wa.me/5491141907720" target="_blank"
-                                                    class="btn-primary">Contactar</a>
-                                            </div>
-                                            <div class="contact-item">
-                                                <i class="fab fa-instagram"></i>
-                                                <h3>Instagram</h3>
-                                                <p>Seguinos en nuestras redes</p>
-                                                <a href="https://www.instagram.com/lacasabar_" target="_blank"
-                                                    class="btn-primary">Ver
-                                                    Instagram</a>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <!-- Castelar -->
+                            <div class="location-card">
+                                <div class="loc-image">
+                                    <img src="images/locations/mansion2.jpg" alt="Castelar">
                                 </div>
-                            </section>
-
-                            <!-- WhatsApp Floating Button -->
-                            <a href="https://wa.me/5491141907720" class="whatsapp-float" target="_blank"
-                                aria-label="Contactar por WhatsApp">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
-
-                            <!-- Footer -->
-                            <footer>
-                                <div class="container footer-content">
-                                    <div class="footer-brand">
-                                        <h3>LA MANSIÓN<span class="accent">.</span></h3>
-                                        <p>Donde las noches cobran vida.</p>
-                                        <div class="social-links">
-                                            <a href="https://www.instagram.com/lacasabar_" target="_blank"><i
-                                                    class="fab fa-instagram"></i></a>
-                                            <a href="https://linktr.ee/lamansionbarituzaingo" target="_blank"><i
-                                                    class="fas fa-link"></i></a>
-                                        </div>
+                                <div class="loc-info">
+                                    <h3>La Casa Bar</h3>
+                                    <p class="loc-subtitle">Castelar</p>
+                                    <div class="loc-details">
+                                        <p><i class="fas fa-map-marker-alt"></i> Santa Rosa 1099</p>
+                                        <p><i class="fas fa-clock"></i> Mié - Dom: 19:00 - Cierre</p>
                                     </div>
-                                    <div class="footer-links">
-                                        <a href="#home">Inicio</a>
-                                        <a href="#menu">Menú</a>
-                                        <a href="#locations">Ubicaciones</a>
-                                        <a href="#contact">Contacto</a>
-                                    </div>
+                                    <a href="https://www.instagram.com/lacasabar_" target="_blank"
+                                        class="btn btn-sm">Ver
+                                        Instagram</a>
                                 </div>
-                                <div class="footer-bottom">
-                                    <p>&copy; 2025 La Mansión Bar. Todos los derechos reservados. <!-- v1.1 --></p>
-                                </div>
-                            </footer>
+                            </div>
 
-                            <script src="menu_data.js"></script>
-                            <script src="script.js"></script>
+                            <!-- Moreno -->
+                            <div class="location-card">
+                                <div class="loc-image">
+                                    <img src="images/locations/moreno.jpg" alt="Moreno">
+                                </div>
+                                <div class="loc-info">
+                                    <h3>La Casa Bar</h3>
+                                    <p class="loc-subtitle">Moreno</p>
+                                    <div class="loc-details">
+                                        <p><i class="fas fa-map-marker-alt"></i> Concejal Rosset 150</p>
+                                        <p><i class="fas fa-clock"></i> Mié - Dom: 19:00 - Cierre</p>
+                                    </div>
+                                    <a href="https://www.instagram.com/lacasabar_m_/" target="_blank"
+                                        class="btn btn-sm">Ver
+                                        Instagram</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Contact/Reservation Section -->
+                <section id="contact" class="contact-section">
+                    <div class="container">
+                        <div class="section-header">
+                            <h2>Reservá tu <span class="accent">Mesa</span></h2>
+                            <p>Contactanos para hacer tu reserva</p>
+                        </div>
+                        <div class="contact-content">
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <h3>WhatsApp</h3>
+                                    <p>Hacé tu reserva por WhatsApp</p>
+                                    <a href="https://wa.me/5491141907720" target="_blank"
+                                        class="btn-primary">Contactar</a>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fab fa-instagram"></i>
+                                    <h3>Instagram</h3>
+                                    <p>Seguinos en nuestras redes</p>
+                                    <a href="https://www.instagram.com/lacasabar_" target="_blank"
+                                        class="btn-primary">Ver
+                                        Instagram</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- WhatsApp Floating Button -->
+                <a href="https://wa.me/5491141907720" class="whatsapp-float" target="_blank"
+                    aria-label="Contactar por WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+
+                <!-- Footer -->
+                <footer>
+                    <div class="container footer-content">
+                        <div class="footer-brand">
+                            <h3>LA MANSIÓN<span class="accent">.</span></h3>
+                            <p>Donde las noches cobran vida.</p>
+                            <div class="social-links">
+                                <a href="https://www.instagram.com/lacasabar_" target="_blank"><i
+                                        class="fab fa-instagram"></i></a>
+                                <a href="https://linktr.ee/lamansionbarituzaingo" target="_blank"><i
+                                        class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="footer-links">
+                            <a href="#home">Inicio</a>
+                            <a href="#menu">Menú</a>
+                            <a href="#locations">Ubicaciones</a>
+                            <a href="#contact">Contacto</a>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>&copy; 2025 La Mansión Bar. Todos los derechos reservados. <!-- v1.1 --></p>
+                    </div>
+                </footer>
+
+                <script src="menu_data.js"></script>
+                <script src="script.js"></script>
 
 </body>
+
 </html>
